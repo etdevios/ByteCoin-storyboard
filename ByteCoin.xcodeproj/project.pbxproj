@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F667C72A29AE9CA300B5DE8A /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F667C72929AE9CA300B5DE8A /* CoinData.swift */; };
+		F667C72C29AE9EC100B5DE8A /* CoinManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F667C72B29AE9EC000B5DE8A /* CoinManagerDelegate.swift */; };
 		F6A9255A29AE508F00415238 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9255929AE508F00415238 /* AppDelegate.swift */; };
 		F6A9255C29AE508F00415238 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9255B29AE508F00415238 /* SceneDelegate.swift */; };
 		F6A9255E29AE508F00415238 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9255D29AE508F00415238 /* ViewController.swift */; };
 		F6A9256129AE508F00415238 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A9255F29AE508F00415238 /* Main.storyboard */; };
 		F6A9256329AE509100415238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A9256229AE509100415238 /* Assets.xcassets */; };
 		F6A9256629AE509100415238 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A9256429AE509100415238 /* LaunchScreen.storyboard */; };
+		F6A9257329AE587200415238 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A9257229AE587200415238 /* CoinManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F667C72929AE9CA300B5DE8A /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
+		F667C72B29AE9EC000B5DE8A /* CoinManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManagerDelegate.swift; sourceTree = "<group>"; };
 		F6A9255629AE508F00415238 /* ByteCoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByteCoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A9255929AE508F00415238 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6A9255B29AE508F00415238 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		F6A9256229AE509100415238 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6A9256529AE509100415238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6A9256729AE509100415238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6A9257229AE587200415238 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		F6A9255829AE508F00415238 /* ByteCoin */ = {
 			isa = PBXGroup;
 			children = (
-				F6A9255929AE508F00415238 /* AppDelegate.swift */,
-				F6A9255B29AE508F00415238 /* SceneDelegate.swift */,
-				F6A9255D29AE508F00415238 /* ViewController.swift */,
-				F6A9255F29AE508F00415238 /* Main.storyboard */,
-				F6A9256229AE509100415238 /* Assets.xcassets */,
-				F6A9256429AE509100415238 /* LaunchScreen.storyboard */,
-				F6A9256729AE509100415238 /* Info.plist */,
+				F6A9256D29AE50B100415238 /* AppDelegates */,
+				F6A9257129AE584500415238 /* Models */,
+				F6A9256F29AE50F300415238 /* Views */,
+				F6A9256E29AE50D700415238 /* Controllers */,
+				F6A9257029AE50FF00415238 /* Resources */,
 			);
 			path = ByteCoin;
+			sourceTree = "<group>";
+		};
+		F6A9256D29AE50B100415238 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				F6A9255929AE508F00415238 /* AppDelegate.swift */,
+				F6A9255B29AE508F00415238 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		F6A9256E29AE50D700415238 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6A9255D29AE508F00415238 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F6A9256F29AE50F300415238 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6A9255F29AE508F00415238 /* Main.storyboard */,
+				F6A9256429AE509100415238 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6A9257029AE50FF00415238 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6A9256229AE509100415238 /* Assets.xcassets */,
+				F6A9256729AE509100415238 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6A9257129AE584500415238 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F667C72929AE9CA300B5DE8A /* CoinData.swift */,
+				F6A9257229AE587200415238 /* CoinManager.swift */,
+				F667C72B29AE9EC000B5DE8A /* CoinManagerDelegate.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,7 +152,7 @@
 				};
 			};
 			buildConfigurationList = F6A9255129AE508F00415238 /* Build configuration list for PBXProject "ByteCoin" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -138,7 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A9257329AE587200415238 /* CoinManager.swift in Sources */,
+				F667C72C29AE9EC100B5DE8A /* CoinManagerDelegate.swift in Sources */,
 				F6A9255E29AE508F00415238 /* ViewController.swift in Sources */,
+				F667C72A29AE9CA300B5DE8A /* CoinData.swift in Sources */,
 				F6A9255A29AE508F00415238 /* AppDelegate.swift in Sources */,
 				F6A9255C29AE508F00415238 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,12 +341,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2W63BAHUHF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ByteCoin/Info.plist;
+				INFOPLIST_FILE = ByteCoin/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,12 +370,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2W63BAHUHF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ByteCoin/Info.plist;
+				INFOPLIST_FILE = ByteCoin/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
